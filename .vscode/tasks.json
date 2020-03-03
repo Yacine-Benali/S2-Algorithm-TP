@@ -1,0 +1,21 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc.exe build active file",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "command": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\gcc.exe",
+
+            "options": {
+                "cwd": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin"
+            }
+            
+        }
+    ],
+    "version": "2.0.0"
+}
