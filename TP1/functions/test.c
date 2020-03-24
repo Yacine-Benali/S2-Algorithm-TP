@@ -14,7 +14,10 @@ int main()
 	int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; 
 	int m = 3, n = 3; 
 
-	// We can also use "print(&arr[0][0], m, n);" 
-	print(*arr, m, n); 
+	// We can also use "print(&arr[0][0], m, n);"
+	printf("%d \n",arr);  
+	printf("%d \n",arr + 1);  
+	printf("%d \n",*arr + 1); 
+	printf("%d \n",**arr); 
 	return 0; 
 } 
