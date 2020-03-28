@@ -1,0 +1,4 @@
+else
+        {
+            ch = fgetc(fp);
+        }
