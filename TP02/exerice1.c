@@ -10,6 +10,12 @@ int main()
     counter = 0;
     ch = fgetc(fp);
 
+    if(fp == NULL)
+    {
+        printf("could not open file");
+        return -1;
+    }
+
     // added this statement because a file can start
     // with a word that starts with the letter A
     if (ch == 'A')

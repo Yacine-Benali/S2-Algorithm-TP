@@ -8,6 +8,11 @@ int main()
     FILE *ff = fopen("F.txt", "r");
     FILE *fg = fopen("G.txt", "w");
 
+    if(ff == NULL || fg == NULL)
+    {
+        printf("could not open one of the files file");
+        return -1;
+    }
     while ((ch = fgetc(ff)) != EOF)
     {
         if (ch == ' ')
