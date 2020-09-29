@@ -36,33 +36,33 @@ int main()
         }
     }
 
-    // int lastInputChecked = 0;
-    // while (feof(input2) == 0)
-    // {
-    //     fscanf(input2, "%d", &input2Int);
-    //     if (input1Int < input2Int && !lastInputChecked)
-    //     {
-    //         printf("*%d vs %d \n", input1Int, input2Int);
-    //         fprintf(output, "%d ", input1Int);
-    //         lastInputChecked = 1;
-    //     }
+    int lastInputChecked = 0;
+    while (feof(input2) == 0)
+    {
+        fscanf(input2, "%d", &input2Int);
+        if (input1Int < input2Int && !lastInputChecked)
+        {
+            printf("*%d vs %d \n", input1Int, input2Int);
+            fprintf(output, "%d ", input1Int);
+            lastInputChecked = 1;
+        }
 
-    //     fprintf(output, "%d ", input2Int);
-    // }
+        fprintf(output, "%d ", input2Int);
+    }
 
-    // lastInputChecked = 0;
-    // while (feof(input1) == 0)
-    // {
-    //     fscanf(input1, "%d", &input1Int);
-    //     if (input2Int < input1Int && !lastInputChecked)
-    //     {
-    //         printf("**%d vs %d \n", input1Int, input2Int);
-    //         fprintf(output, "%d ", input2Int);
-    //         lastInputChecked = 1;
-    //     }
+    lastInputChecked = 0;
+    while (feof(input1) == 0)
+    {
+        fscanf(input1, "%d", &input1Int);
+        if (input2Int < input1Int && !lastInputChecked)
+        {
+            printf("**%d vs %d \n", input1Int, input2Int);
+            fprintf(output, "%d ", input2Int);
+            lastInputChecked = 1;
+        }
 
-    //     fprintf(output, "%d ", input1Int);
-    // }
+        fprintf(output, "%d ", input1Int);
+    }
 
     fclose(input1);
     fclose(input2);
