@@ -45,16 +45,16 @@ void insert(Node **tete, int x)
     newNode->val = x;
     Node *prec, *suiv;
     suiv = prec = *tete;
-    while (suiv->suiv != NULL)
+    while (suiv != NULL)
     {
-        prec = suiv;
-        suiv = suiv->suiv;
         if (x < suiv->val)
         {
             newNode->suiv = suiv;
             prec->suiv = newNode;
             break;
         }
+        prec = suiv;
+        suiv = suiv->suiv;
     }
 }
 int main()
