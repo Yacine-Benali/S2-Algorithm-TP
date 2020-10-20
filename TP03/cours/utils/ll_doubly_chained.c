@@ -17,8 +17,6 @@ int main()
 Liste *creation(Liste *tete, int x)
 {
     Liste *p = (Liste *)malloc(sizeof(Liste));
-    /* Ou bien Liste *p = new Liste tout simplement en
-    utilisant l'opérateur new du C++ */
 
     p->val = x;
     p->prec = NULL;
