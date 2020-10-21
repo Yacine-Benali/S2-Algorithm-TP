@@ -1,1 +1,1 @@
-int
+ // (*tete) = courant;
