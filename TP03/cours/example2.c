@@ -38,6 +38,7 @@ Liste *creation(Liste *tete, Liste **queue, int x)
         tete = p;
     else
         (*queue)->suiv = p; /* Sinon le nouvel élément est chaîné au dernier élément de la liste */
+   
     *queue = p;             // Actualisation du pointeur queue qui devient le nouvel élément
     return tete;            // Nouvelle tête si la liste était réellement vide
 }

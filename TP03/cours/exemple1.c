@@ -5,9 +5,11 @@ typedef struct liste
     int valeur;         // Champ donnée de l'élément
     struct liste *suiv; // Champ adresse pointant vers l'élément suivant
 } Liste;
+
 Liste *tete = NULL;
 Liste *creation(Liste *tete, int x); // La fonction retourne un pointeur de type Liste 
 void affichListe(Liste *tete);
+
 int main()
 {
     int x;
@@ -34,6 +36,7 @@ utilisant l'opérateur new du C++ */
     p->suiv = tete;
     return p; // Nouvelle tête
 }
+
 void affichListe(Liste *tete)
 {
     Liste *courant = tete;

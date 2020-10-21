@@ -26,7 +26,7 @@ int main()
         reponse = getchar();
 
     } while (reponse == 'o');
-    tete = insert_indice(tete, 69, 2);
+    tete = insert_indice(tete, 69, 3);
     printf("\nContenu de la liste :\n");
     affichListe(tete);
 }
@@ -98,6 +98,27 @@ Liste *insert_indice(Liste *tete, int x, int l)
         }
         else
             printf("La liste est trop courte pour insérer a la position %d\n", l);
+
+        //? alternative solution
+        i = 1;
+        int isfound = 0;
+        courant = tete;
+        while (courant != NULL)
+        {
+            prec = courant;
+            courant = courant->suiv;
+            i++;
+            if (i == l)
+            {
+                nouv->suiv = courant;
+                prec->suiv = nouv;
+                isfound = 1;
+            }
+            if (isfound)
+                break;
+        }
+        if (!isfound)
+            printf("makanch");
     }
     return tete;
 }
@@ -120,8 +141,6 @@ Liste *insert_address(Liste *tete, Liste *p, int x)
     }
     return tete;
 }
-
-
 
 void affichListe(Liste *tete)
 {
