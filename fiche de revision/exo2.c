@@ -9,23 +9,17 @@ typedef struct list
 
 List *tete = NULL;
 
-void multiply()
+int multiplyRecursive(List *node)
 {
-    if (tete == NULL)
+    //no recursive
+    if (node == NULL)
     {
-        printf("lalist est vide rien a multiplier");
-        return;
+
+        return 1;
     }
     else
     {
-        int result = 1;
-        List *courant = tete;
-        while (courant != NULL)
-        {
-            result = result * (courant->val);
-            courant = courant->suiv;
-        }
-        printf("le resultat est %d", result);
+        return node->val * multiplyRecursive(node->suiv);
     }
 }
 
@@ -61,6 +55,7 @@ int main()
     {
         ajout(i);
     }
-    multiply();
+    int a = multiplyRecursive(tete);
+    printf("%d", a);
     //affiche();
 }
