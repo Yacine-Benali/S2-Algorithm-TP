@@ -4,10 +4,12 @@
 int fibonacci(int n, int counter, int f0, int f1)
 {
 
-    if (n == 0 || n == 1)
+    if (n == 0)
     {
-        return 1;
+        return 0;
     }
+    else if (n == 1)
+        return 1;
     else if (n == counter)
     {
         return (f0 + f1);
@@ -25,6 +27,6 @@ int main()
     printf("how many fibonacci number to show: ");
     scanf("%d", &n);
 
-    int result = fibonacci(n, 2, 1, 1);
+    int result = fibonacci(n, 2, 0, 1);
     printf("f%d is: %d", n, result);
 }

@@ -14,6 +14,6 @@ int main()
     {
         // Allocating memory without freeing it
         printf("allocation number %d \n", i);
-        int *ptr = (int *)malloc(sizeof(int));
+        int *ptr = (int *)malloc(sizeof(int) * 1000);
     }
 }

@@ -17,6 +17,7 @@ int main()
     fgets(string,50,fptr);
     printf("read %s",string);
     FILE *fptr2;
+    
     fptr2 = fopen("essai2.dat","w+");
     if(fptr2 == NULL)
     {

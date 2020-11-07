@@ -33,6 +33,7 @@ int main()
     char str[50];
     
     printf("enter the word:");
+    scanf("%s",str);
     int size = strlen(str);
 
     bool result = isPalindrome(str, 0, size - 1);

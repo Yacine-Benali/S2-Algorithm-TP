@@ -10,7 +10,7 @@ int main()
         printf("could not open f file \n");
         return -1;
     }
-    gFile = fopen("g", "w");
+    gFile = fopen("g", "w+");
     if (gFile == NULL)
     {
         printf("could not creat gfile ");
@@ -18,25 +18,22 @@ int main()
     }
 
     char first, second, temp;
-    first = fgetc(fFile);
-    fputc(first, gFile);
-    while ((second = fgetc(fFile)) != EOF)
+    first = getc(fFile);
+    second = first;
+
+    while ((second = getc(fFile)) != EOF)
     {
-        if (first == ' ' && second == ' ')
+        if (first != ' ')
         {
-            temp = fgetc(fFile);
-            while (temp == ' ')
-            { /* nothing but advancing the cursuer position*/
-                temp = fgetc(fFile);
-            }
-            fputc(temp, gFile);
+            fputc(first, gFile);
         }
-        else
+        else if (first == ' ' && second != ' ')
         {
-            fputc(second, gFile);
+            fputc(first, gFile);
         }
         first = second;
     }
+    fputc(first, gFile);
     fclose(fFile);
     fclose(gFile);
 }

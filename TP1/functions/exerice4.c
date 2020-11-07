@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 void mirror(char str[])
 {
@@ -8,25 +8,23 @@ void mirror(char str[])
     int i = 0;
     char *temp;
 
-    strcpy(temp,str);
+    strcpy(temp, str);
 
-    for(i = 0 ; i < t ; i++)
+    for (i = 0; i < t; i++)
     {
-        str[i] = temp[t-i-1];
+        //! t- i-1
+        str[i] = temp[t - i - 1];
     }
-
 }
 
 int main()
 {
     char str[] = "hello";
-    
+
     // printf("enter the sentence:");
     // scanf("%s",str);
-    printf("orgignal string: %s \n",str);
-
+    printf("orgignal string: %s \n", str);
 
     mirror(str);
-    printf("mirrored string: %s",str);
-
+    printf("mirrored string: %s", str);
 }
